@@ -25,15 +25,27 @@ if(!rWord){
 //anagramMaker(words[Math.floor(Math.random() * words.length)]);
 //console.log(anagrams[Math.floor(Math.random() * anagrams.length)]);
 
-
+let displayhere = document.querySelector("#random")
 let keyButtons = document.querySelector(".keyboard-btns");
 let emptyTile = document.querySelector("#tile");
+
+displayhere.innerHTML = anagramMaker(words[Math.floor(Math.random() * words.length)]);
 
 keyButtons.addEventListener('click', e => {
 emptyTile.innerHTML = e.target.matches("value");
 })
 
+function keypress(e){
+    if (e.target.matches(data-set)){
+        emptyTile.innerHTML = e.target.matches("value");
+    }
+    
+}
 
+function checker(){
+
+
+}
 
 
 
